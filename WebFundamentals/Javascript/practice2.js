@@ -37,3 +37,39 @@
 
 // myArr[myArr.length + 1] = 2;
 // console.log(myArr.length);
+
+// var glazedDonuts = [
+//   {
+//     frosting: 'glazed',
+//     style: 'cake',
+//     type: 'old fashioned',
+//     age: '45',
+//     time: 'minutes'
+//   },
+//   {
+//     frosting: 'glazed',
+//     style: 'yeast raised',
+//     type: 'regular',
+//     age: '5',
+//     time: 'minutes'
+//   },
+//   {
+//     frosting: 'glazed',
+//     style: 'yeast raised',
+//     type: 'jelly filled',
+//     age: '1',
+//     time: 'seconds'
+//   }
+// ];
+
+// var purchase;
+// //You
+// if((glazedDonuts[2].age < 25 && glazedDonuts[2].time == 'minutes') || glazedDonuts[2].time == 'seconds'){
+//   //shop owner
+//   purchase = glazedDonuts[2];
+//   console.log("here you go ")
+// }
+// else {
+//   console.log('sorry it has been out a bit longer');
+// } 
+
