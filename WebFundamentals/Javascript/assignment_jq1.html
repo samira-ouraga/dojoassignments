@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>myweb</title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style>
+	.stylish{
+		margin: 8px;
+    font-size: 20px;
+}
+  .highlight {
+    background: red;
+  }
+}
+
+  </style>
+	<script type="text/javascript">
+$(document).ready(function(){
+
+$( "p" ).click(function() {
+  alert( "Thanks for clicking!");
+});
+
+$(".hideit").click(function(){
+    $("p").hide();
+});
+
+$(".showit").click(function(){
+        $("p").show();
+    });
+
+$('#learning').click(function(){
+			$("p").toggle();
+		});
+
+$('.slideit').click(function(){
+			$(".dance").slideDown();
+		});
+
+$('.slideup').click(function(){
+			$(".dancing").slideUp();
+		});
+
+$('.move').click(function(){
+			$(".slidetoggle").slideToggle();
+		});
+
+$(".btnc").click(function(){
+        $(".para").fadeOut()
+    });
+    $(".btnd").click(function(){
+        $(".para").fadeIn();
+    });
+
+    $("#classyp").click(function(){
+        $(".stylish").addClass("highlight");
+    });
+
+    $("#addingstuff").click(function(){
+        $(".beforeit").before("<p>I just got in</p>");
+    });
+
+    $(".afterit").click(function(){
+        $(".newbelow").after("<p>I am late!</p>");
+    });
+
+    $("#btnf").click(function(){
+        $(".appendedhere").append(" <b>wohoooooo </b>.");
+    });
+
+ $(".btng").click(function(){
+        $(".thishtml").html("Hello <b>world!</b>");
+    });
+
+ $("#attrit").click(function(){
+        $(".puppy").attr("width", "500");
+    });
+
+ $(".writehere").click(function(){
+        $("input:text").val("Dicaprio");
+    });
+
+  $(".almost").click(function(){
+        $(".addingit").text("I miss the winter!");
+    });
+
+   $("#btns").click(function(){
+        $("div").data("lastone", "jquery is cool!");
+    });
+    $("#btno").click(function(){
+        alert($("div").data("lastone"));
+    });
+
+
+});   
+
+	</script>
+</head>
+<body>
+<fieldset> <h1>Click</h1>
+<p>Click me here</p></fieldset>
+
+<fieldset><h1>Hide</h1>
+<p >I will disappear</p>
+<button class="hideit">click to hide</button>
+<button class="showit">click to show me!</button>	
+</fieldset>
+
+	<fieldset><h1>Toggle</h1>
+<p>I will disapear and come back as you click</p>
+<button id="learning">Toggle to hide /show paragraph</button>	
+</fieldset>
+
+<fieldset><h1>Slide Down</h1>
+<p class="dance">We are doing the electric slide</p>
+<button class="slideit">slidedown</button>
+</fieldset>
+
+<fieldset><h1>Slide Up</h1>
+<p class="dancing">We are doing the electric slide, oh yeaaaaa</p>
+<button class="slideup">slide up </button>
+</fieldset>
+
+<fieldset><h1>Slide toggle</h1>
+<p class="slidetoggle">We are doing the electric slide, oh yeaaaaa</p>
+<button class="move">click</button>
+</fieldset>
+
+<fieldset><h1>Fade In and Out</h1>
+<p class="para">This is a paragraph.</p>
+
+<button class="btnc">Fade out</button>
+<button class="btnd">Fade in</button>
+</fieldset>
+
+<fieldset><h1>Add class</h1>
+
+	<p class="stylish">I  have class now</p>
+
+	<button id="classyp">Add class to this paragraph</button>
+</fieldset>
+
+<fieldset><h1>We will add element before</h1>
+
+<button id="addingstuff">Insert content before each p element</button>
+
+<p class="beforeit">This is a paragraph.</p>
+
+	
+</fieldset>
+
+<fieldset><h1>We will add element after paragraph</h1>
+
+<button class="afterit">Insert content after each p element</button>
+
+<p class="newbelow">This is a paragraph.</p>
+	
+</fieldset>
+
+<fieldset><h1>We will Append</h1>
+<button id="btnf">Append text</button>
+
+<p class="appendedhere">This is a paragraph.</p>
+
+</fieldset>
+<fieldset><h1>HTML ELEMENT</h1>
+	<button class="btng">Change content of this p elements</button>
+
+<p class="thishtml">This is a paragraph.</p>
+</fieldset>
+
+<fieldset><h1>Attr the element</h1>
+<img src="http://cdn3-www.dogtime.com/assets/uploads/gallery/30-impossibly-cute-puppies/impossibly-cute-puppy-21.jpg" alt="Pulpit Rock" width="184" height="113" class="puppy">
+
+<button id="attrit">Set the width attribute of the image</button>
+</fieldset>
+
+<fieldset><h1> Val in jquery</h1>
+<p>Name: <input type="text" name="actor"></p>
+
+<button class="writehere">Add name of actor</button>
+</fieldset>
+
+<fieldset><h1>TEXT JQUERY</h1>
+<button class="almost">Set text content</button>
+
+<p class="addingit">When in Seattle.</p></fieldset>
+
+<button id="btns">Attach data to div element</button><br>
+<button id="btno">Get data attached to div element</button>
+
+<div></div>
+
+</body>
+</html>
