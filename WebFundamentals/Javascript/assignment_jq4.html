@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>testing </title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<style type="text/css">
+		.theform{
+			display: inline-block;
+			height: 400px;
+			
+		}
+
+		table,th,td{
+			border:1px solid black;
+		
+		}
+	</style>
+	
+<script type="text/javascript">
+	$(document).ready(function() {
+	$('#btn').click(function() {
+		$('#thetable').append('<tr><td>' + $('input[name="firstname"]').val() + '</td><td>'
+						+ $('input[name="lastname"]').val() + '</td><td>'
+							+ $('input[name="age"]').val() + '</td><td>'
+						+ $('input[name="email"]').val() + '</td><td>'
+						+ $('input[name="contact"]').val() + '</td></tr>');
+					return false;
+				});
+			});
+</script>
+
+
+</head>
+<body>
+<table class="theform" id="thetable">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th> 
+    <th>Age</th>
+    <th>Email</th>
+    <th>Contact#</th>
+  </tr>
+  
+  </table>
+
+
+  <form class="theform">
+  First name:
+  <input type="text"  name="firstname">
+  <br>
+  Last name:
+  <input type="text" name="lastname" >
+  <br>
+  Age:
+  <input type="text" name="age" >
+  <br>
+  Email:
+  <input type="text" name="email" >
+  <br>
+  Contact# :
+  <input type="text" name="contact">
+  <br><br>
+  <input type="submit" value="Add User" id="btn" >
+</form> 
+  
+
+</body>
+</html>
