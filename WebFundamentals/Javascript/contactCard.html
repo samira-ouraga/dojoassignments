@@ -55,7 +55,7 @@
 	</style>
 	<script type="text/javascript">
    			$(document).ready(function(){
-   				$("#btn").click(function(){
+  				$("#btn").click(function(){
 			$(".box").append("<div id='inner'><h1>" + $('input[name="firstname"]').val() + " " +
 				$('input[name="lastname"]').val() +"</h1>" + "<p>click for description </p>" + "<h4 id='other'>" + $('textarea[name="description"]').val() + "</h4>" + "</div>");
 			return false;
@@ -65,6 +65,20 @@
 				//Toggle the #cards' childrens' display property
 				$(this).children().toggle();
 			});
+}
+// how to dig into data available online to fill contact card instead of by hand using API
+   	 $("form.githubForm").submit(function(e){
+		e.preventDefault();
+		console.log("submitted it", e.target.childNodes[3].value); // e.target is what is the thing that caused this event, get it (form), dig in the child(input) ), the 3 is the username child of the target form 
+		//this here says find stuff by id username which value is found on the api
+		let username = $("#username").val();
+		//jQuery.get can be written $.get, so here we are grabbing my user info from my github 
+		$.get("https://api.github.com/users/samira-ouraga", function(data){
+			console.log(data);
+			//this is the append jquery i did earlier,
+			generateCard(data.login,data.name,data.bio); // if I don't have it in function copy and paste the whole thing here
+		});
+   	 });
 	
 	});
 	</script>
@@ -84,6 +98,12 @@
   <br><br>
   <input type="submit" value="Add User" id="btn" >
 </form> 
+<!-- how to dig into data available online to fill contact card instead of by hand using API-->
+<form class="githubForm" accept="" method="get"> <!-- this is the target-->
+<label for="username ">Search Github by username</label> <!-- label is child 1, text is >< is child 2, and input username is child 3 -->
+<input id="username" type="text" name="username" value="samira-ouraga">
+<input type="submit" name="" value="Search">
+</form>
 
 <div class="thecards">
 	<aside class="box"></aside>

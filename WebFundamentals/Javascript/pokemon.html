@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+	<title>pokemon game </title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="pokemon.css">
+	<script type="text/javascript">
+	$(document).ready(function(){
+			for(var i = 1; i <= 151; i++){
+				 $("#wrapper").append('<img  id="pokemon" src="http://pokeapi.co/media/img/'+ i +'.png">');
+				};
+});
+
+	</script>
+</head>
+<body>
+<div id="wrapper">
+
+</div>
+</body>
+</html>
