@@ -2,14 +2,18 @@ class MathDojo(object):
     def __init__(self):
         self.result = 0
 
-    def add(self, arg1,*args):
+    def add(self,*args):
         for i in args:
-            for j in i:
-                self.result += arg1 + j
-        print self.result
+            if type(i) == list or type(i) == tuple:
+                for k in i:
+                    self.result += k                      
+            else:
+                self.result += i 
+                 
+        print self.result                
         return self
 
-    def subtract(self,arg2):
+    def subtract(self,*args):
         self.result -=arg2
         print self.result
         return self
@@ -18,5 +22,5 @@ class MathDojo(object):
         return self.result
 
 md = MathDojo()
-md.add(1,[1]).final_result()
+md.add(1,[1,1]).final_result()
 
