@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>ninja page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <p>
+           Info about ninjas
+        </p>
+        <h1>My Ninjas:</h1>
+        <ul>
+            {% for ninjas in ninjas %}
+            <li>{{ninjas}}</li>
+            {% endfor %}
+        </ul>
+
+        <a href="/">click here for home page</a>
+    </body>
+</html>
