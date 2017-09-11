@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number game</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+        body{
+            margin: 0 auto;
+            padding: 0;
+        }
+        .box{
+            background-color:red;
+            height: 90px;
+            width:200px;
+            margin-left: 15px;
+            border: 1px solid black; 
+        }
+    </style>
+</head>
+<body>
+     <h1>Pick a number between 0 and 100!</h1>
+    <form action="/high" method="post">
+        Pick a number:<br>
+        <input type="text" name="number" >
+        <br><br>
+        <input type="submit" value="Submit">
+    </form> -->
+    <div class="box">
+    <p> {{ session['number'] }} </p>
+    <p> {{session['other']}}</p>
+    <p> Your number is too low</p>
+    </div>
+</body>
+</html>
