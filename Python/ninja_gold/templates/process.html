@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta charset="UTF-8">
+            <title>NINJA GOLD!!!!!!!!!</title>
+            <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+            <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" 
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+            <style>
+                .wrapper{
+    margin: 0 auto;
+    height: 900px;
+    width: 970px;
+}
+.farms{
+    height: 300px;
+    width: 970px;
+    border: 1px solid black;
+    margin-top: 5px;
+}
+
+form{
+    display: inline-block;
+    height: 230px;
+    width: 180px;
+    border: 1px solid black; 
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.activities{
+    height: 200px;
+    width: 950px;
+    border: 1px solid black; 
+}
+
+</style>
+ 
+    </head>
+    <body>
+    <div class="wrapper">
+                <h3>Your gold: {{session['total']}}</h3>
+        <div class="farms">
+
+            <form action="/process_money" method="post">
+                <label for="farm">FARM</label>
+                <br>
+                (earn 0-100 gold)
+                <input type="hidden" name="building" value='farm' />
+                <br><br>
+                <input type="submit" value="Find Gold!"/>
+            </form>
+
+            <form action="/process_money" method="post">
+                <label for="farm">CAVE</label>
+                <br>
+                (earn 0-100 gold)
+                <input type="hidden" name="building" value="cave" />
+                <br><br>
+                <input type="submit" value="Find Gold!"/>
+            </form>
+
+            <form action="/process_money" method="post">
+                <label for="farm">HOUSE</label>
+                <br>
+                (earn 0-100 gold)
+                <input type="hidden" name="building" value="house" />
+                <br><br>
+                <input type="submit" value="Find Gold!"/>
+            </form>
+
+            <form action="/process_money" method="post">
+                <label for="farm">CASINO</label>
+                <br>
+                (earn 0-100 gold)
+                <input type="hidden" name="building" value="casino" />
+                <br><br>
+                <input type="submit" value="Find Gold!"/>
+            </form>
+
+            <form action="/clear" method="post">
+                <input type="submit"  name='clear' value="clear">
+            </form>
+
+        </div>
+        <p>Activites</p>
+        <div class=" activities">
+
+        {% if activities %}
+        <ul>
+            {% for activity in activities %}
+            <li>{{activity}}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+        </div>
+    </div>          
+    </body>
+</html>

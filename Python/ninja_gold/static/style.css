@@ -1,0 +1,18 @@
+.wrapper{
+    margin: 0 ;
+    height: 900px;
+    width: 970px;
+}
+.farms{
+    height: 500px;
+    width: 970px;
+    display: inline-block;
+    border: 1px solid black;
+}
+
+.farms>form{
+    display: inline-block;
+    height: 90px;
+    width: 90px;
+    border: 1px solid black; 
+}
